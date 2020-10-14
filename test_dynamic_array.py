@@ -22,40 +22,40 @@ class TestDynamicArray(unittest.TestCase):
         except NameError:
             self.fail("Could not instantiate DynamicArray.")
 
-    # def test_default_initial_capacity(self):
-    #     """
-    #     The default initial capacity is ten.
-    #     """
-    #     a = DynamicArray()
-    #     self.assertEqual(10, a.capacity)
+    def test_default_initial_capacity(self):
+        """
+        The default initial capacity is ten.
+        """
+        a = DynamicArray()
+        self.assertEqual(10, a.capacity)
 
-    # def test_initially_empty(self):
-    #     """
-    #     A dynamic array is initially empty.
-    #     """
-    #     a = DynamicArray()
-    #     self.assertTrue(a.is_empty())
+    def test_initially_empty(self):
+        """
+        A dynamic array is initially empty.
+        """
+        a = DynamicArray()
+        self.assertTrue(a.is_empty())
 
-    # def test_initial_length(self):
-    #     """
-    #     A dynamic array has an initial length of 0.
-    #     """
-    #     a = DynamicArray()
-    #     self.assertEqual(0, len(a))
+    def test_initial_length(self):
+        """
+        A dynamic array has an initial length of 0.
+        """
+        a = DynamicArray()
+        self.assertEqual(0, len(a))
 
 
-    # """
-    # Appending and retrieving one value
-    # """
+    """
+    Appending and retrieving one value
+    """
 
-    # # Hint: Do the naive thing.
-    # def test_append_one_value_to_empty(self):
-    #     """
-    #     A single value can be appended to and retrieved from a dynamic array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append(42)
-    #     self.assertEqual(42, a[0])
+    # Hint: Do the naive thing.
+    def test_append_one_value_to_empty(self):
+        """
+        A single value can be appended to and retrieved from a dynamic array.
+        """
+        a = DynamicArray()
+        a.append(42)
+        self.assertEqual(42, a[0])
 
     # """
     # Appending and retrieving two values
@@ -73,17 +73,17 @@ class TestDynamicArray(unittest.TestCase):
     #     self.assertEqual(8, a[0])
     #     self.assertEqual(6, a[1])
 
-    # """
-    # Guiding internal data storage, with a static array
-    # """
+    """
+    Guiding internal data storage, with a static array
+    """
 
-    # def test_data_property(self):
-    #     """
-    #     Has an internal `data` property that is a numpy ndarray.
-    #     """
-    #     import numpy as np # Hint: Get an error? Just `pip3 install numpy`
-    #     a = DynamicArray()
-    #     self.assertEqual(np.ndarray, type(a.data))
+    def test_data_property(self):
+        """
+        Has an internal `data` property that is a numpy ndarray.
+        """
+        import numpy as np # Hint: Get an error? Just `pip3 install numpy`
+        a = DynamicArray()
+        self.assertEqual(np.ndarray, type(a.data))
 
     # def test_data_object_references(self):
     #     """
