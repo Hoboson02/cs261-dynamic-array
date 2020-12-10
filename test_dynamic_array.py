@@ -1,5 +1,5 @@
 # DO NOT MODIFY THE TESTS IN THIS FILE
-# Run me via: python3 -m unittest test_dynamic_array
+# Run me via: python -m unittest test_dynamic_array
 
 import unittest
 import time
@@ -63,27 +63,27 @@ class TestDynamicArray(unittest.TestCase):
 
     # # Tip: If you haven't gotten this to pass within two minutes, comment it out
     # # and move on.
-    # def test_append_two_values(self):
-    #     """
-    #     Two values can be appended to and retrieved from a dynamic array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append(8)
-    #     a.append(6)
-    #     self.assertEqual(8, a[0])
-    #     self.assertEqual(6, a[1])
+    def test_append_two_values(self):
+        """
+        Two values can be appended to and retrieved from a dynamic array.
+        """
+        a = DynamicArray()
+        a.append(8)
+        a.append(6)
+        self.assertEqual(8, a[0])
+        self.assertEqual(6, a[1])
 
     """
     Guiding internal data storage, with a static array
     """
 
-    def test_data_property(self):
-        """
-        Has an internal `data` property that is a numpy ndarray.
-        """
-        import numpy as np # Hint: Get an error? Just `pip3 install numpy`
-        a = DynamicArray()
-        self.assertEqual(np.ndarray, type(a.data))
+    # def test_data_property(self):
+    #     """
+    #     Has an internal `data` property that is a numpy ndarray.
+    #     """
+    #     import numpy as np # Hint: Get an error? Just `pip3 install numpy`
+    #     a = DynamicArray()
+    #     self.assertEqual(np.ndarray, type(a.data))
 
     # def test_data_object_references(self):
     #     """
